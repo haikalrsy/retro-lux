@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motors Hub</title>
+    <link rel="icon" href="icon.webp" type="image/png">
+    
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- CDN -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+    .open-sans{
+
+        
+    }
+    *{
+     font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+        .font-playfair { font-family: "Cormorant Garamond", serif;
+}
+ .font-work {  font-family: "Work Sans", sans-serif;
+}
+.font-eb {   font-family: "EB Garamond", serif;
+}
+        
+        
+        body {
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 1;
+        }
+        
+        #particles-top {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .text-shadow { text-shadow: 2px 2px 8px rgba(0,0,0,0.9); }
+        
+        .card-hover {
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            border-color: rgba(255,255,255,0.2);
+        }
+        
+        .car-image {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+            overflow: hidden;
+            filter: grayscale(100%);
+        }
+        .car-image:hover{
+            filter: none;
+        }
+        .car-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+            filter: none;
+        }
+        
+        .premium-gradient {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #d4d4d4 100%);
+            color: #000;
+        }
+        .premium-gradient:hover{
+            background: #000;
+            color: white;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.85);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .pulse-slow {
+            animation: pulse 3s infinite;
+            
+        }
+        
+        .bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .shopping-bag-icon {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .shopping-bag-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .bag-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        .checkout-modal {
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .success-animation {
+            animation: successPulse 0.6s ease-out;
+        }
+        
+        @keyframes successPulse {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .tilt-hover {
+            transform-style: preserve-3d;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #333, #555);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #555, #777);
+        }
+         .vid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+   .search-input {
+            width: 100%;
+            padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+
+        .search-input::placeholder {
+            color: transparent;
+        }
+
+        .search-input:focus {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .search-input:focus ~ .search-icon {
+            color: #ffffff;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .placeholder-text {
+            position: absolute;
+            left: 3.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .cursor {
+            animation: blink 1s infinite;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .search-container:hover .search-input {
+            transform: translateY(-1px);
+        }
+   
+</style>
+<body class="font-inter bg-black min-h-screen text-white">
+    <!-- Particles Background -->
+    
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navbar-blur transition-all duration-500" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 animate__animated animate__fadeInLeft">
+                    <span class="font-eb text-3xl font-bold text-white" style="left: 0;">Retro<span class="text-sky-100 font-eb">Lux</span></span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 font-work">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-all duration-300 font-medium relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#showroom" class="text-gray-300 hover:text-white transition-all duration-300 font-medium relative group">
+                        Showroom
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#gallery" class="text-gray-300 hover:text-white transition-all duration-300 font-medium relative group">
+                        Gallery
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-all duration-300 font-medium relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-all duration-300 font-medium relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                
+                <!-- Search & Actions -->
+    <div class="flex items-center space-x-4">
+       <div class="search-container">
+        <input 
+            type="text" 
+            class="search-input glass-morphism" 
+            id="searchInput"
+            autocomplete="off"
+        >
+        <i class="fas fa-search search-icon"></i>
+        <div class="placeholder-text" id="placeholderText"></div>
+    </div>
+    <button class="shopping-bag-icon p-3 text-gray-300 hover:text-white transition-all duration-300 relative" id="bag-icon">
+        <i class="fas fa-shopping-bag text-xl"></i>
+        <!-- UBAH ID INI dari "add-to-bag" ke "bag-counter" -->
+        <span class="bag-count opacity-0 absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold transition-opacity duration-300" id="bag-counter">0</span>
+    </button>
+    <button class="md:hidden p-3 text-gray-300" id="mobile-menu-btn">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+     <button class=" shopping-bag-icon text-gray-300 hover:text-white transition-all duration-300 relative">
+        <i class="fas fa-solid fa-circle-user" text-xl"></i>
+        <!-- UBAH ID INI dari "add-to-bag" ke "bag-counter" -->
+        
+    </button>
+</div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+      <video class="vid-bg sepia " autoplay muted loop playsinline >
+    <source src="mc.mp4" type="video/mp4">
+  </video>
+    <section id="home" class=" relative overflow-hidden min-h-screen flex items-center">
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <!-- Hero Content -->
+                <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0" data-aos="fade-right" data-aos-duration="1200">
+                    <h1 class="font-playfair text-6xl lg:text-8xl font-bold text-white mb-8 text-shadow">
+                        <span id="typed-text"></span>
+                        <br>
+                        <span class="text-gray-300 animate__animated animate__pulse animate__infinite font-playfair ">Automotive Excellence</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-eb text-2xl">
+                        Experience the pinnacle of luxury and performance. Our curated collection features the world's most prestigious and sought-after vehicles, crafted for those who demand nothing but perfection.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="premium-gradient px-10 py-4 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-2xl hvr-float" onclick="scrollToSection('showroom')">
+                            <i class="fas fa-eye mr-3"></i>
+                            Explore Collection
+                        </button>
+                        <button class="glass-morphism px-10 py-4 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 border border-white/20">
+                            <i class="fas fa-play mr-3"></i>
+                            Watch Experience
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hero Animation -->
+                <div class="lg:w-1/2 flex justify-center" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                    <div class="relative">
+                        <div class="w-96 h-96 glass-morphism rounded-full floating-animation opacity-30"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div id="car-3d-model" class="w-80 h-80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down text-white text-2xl opacity-70"></i>
+        </div>
+    </section>
+    
+    <!-- Brand Categories -->
+    <section class="py-20 h " style="background-image: url(Gotham\ \(4\).jpg) ; background-position: center; background-size: cover; background-repeat: no-repeat;">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="font-playfair text-5xl lg:text-6xl font-bold text-white mb-6">Luxury Heritage</h2>
+                <p class="text-gray-400 text-xl max-w-2xl mx-auto font-work">Representing the world's finest automotive manufacturers with decades of craftsmanship and innovation</p>
+            </div>
+            
+            <div class="brand-grid">
+                <!-- Ferrari -->
+                <div class="glass-morphism rounded-3xl p-10 text-center card-hover tilt-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-8 floating-animation">
+                       <img class="w-20 h-20" src="https://www.svgrepo.com/show/446955/ferrari.svg" alt="">
+                    </div>
+                    <h3 class="font-playfair text-3xl font-bold text-white mb-4">Ferrari</h3>
+                    <p class="text-gray-300 text-lg">Italian racing excellence since 1947</p>
+                    <div class="mt-6 flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                </div>
+                
+                <!-- Lamborghini -->
+                <div class="glass-morphism rounded-3xl p-10 text-center card-hover tilt-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-24 h-24 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-8 floating-animation" style="animation-delay: 1s;">
+                        <img class="w-20 h-20" src="https://www.svgrepo.com/show/446886/lamborghini.svg" alt="">
+                    </div>
+                    <h3 class="font-playfair text-3xl font-bold text-white mb-4">Lamborghini</h3>
+                    <p class="text-gray-300 text-lg">Raging bull performance and design</p>
+                    <div class="mt-6 flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                </div>
+                
+                <!-- Rolls Royce -->
+                <div class="glass-morphism rounded-3xl p-10 text-center card-hover tilt-hover" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-24 h-24 bg-white  rounded-full flex items-center justify-center mx-auto mb-8 floating-animation" style="animation-delay: 2s;">
+                        <img class="w-20 h-20" src="https://www.svgrepo.com/show/446917/rolls-royce.svg" alt="">
+                    </div>
+                    <h3 class="font-playfair text-3xl font-bold text-white mb-4">Rolls Royce</h3>
+                    <p class="text-gray-300 text-lg">Ultimate luxury and refinement</p>
+                    <div class="mt-6 flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                </div>
+                 <!-- mclrn -->
+                <div class="glass-morphism rounded-3xl p-10 text-center card-hover tilt-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-gradient-to-br from-white to-black rounded-full flex items-center justify-center mx-auto mb-8 floating-animation">
+                        <img src="https://www.svgrepo.com/show/446896/mclaren-alt.svg" alt="">
+                    </div>
+                    <h3 class="font-playfair text-3xl font-bold text-white mb-4">Mclaren</h3>
+                    <p class="text-gray-300 text-lg">British motor racing team since 1963</p>
+                    <div class="mt-6 flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                </div>
+                 <!-- Ferrari -->
+                <div class="glass-morphism rounded-3xl p-10 text-center card-hover tilt-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-8 floating-animation">
+                       <img class="w-20 h-20" src="https://www.svgrepo.com/show/303478/bmw-mini-1-logo.svg" alt="">
+                    </div>
+                    <h3 class="font-playfair text-3xl font-bold text-white mb-4">Mini Coopper</h3>
+                    <p class="text-gray-300 text-lg">Made by the British Motor Corporation</p>
+                    <div class="mt-6 flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-black rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-black rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-2 h-2 bg-black rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                </div>
+                 <!-- Ferrari -->
+                <div class="glass-morphism rounded-3xl p-10 text-center card-hover tilt-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 floating-animation">
+                       <img class="w-20 h-20" src="https://www.svgrepo.com/show/446943/bmw.svg" alt="">
+                    </div>
+                    <h3 class="font-playfair text-3xl font-bold text-white mb-4">BMW</h3>
+                    <p class="text-gray-300 text-lg">The company was founded in 1916</p>
+                    <div class="mt-6 flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+       
+            
+    </section>
+  
+   
+    <!-- Featured Cars Section -->
+     
+    <section id="showroom" class="py-20 h bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-black via-black to-white " >
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-playfair text-5xl lg:text-6xl font-bold text-white mb-6">Exclusive Collection</h2>
+                <p class="text-white text-xl max-w-2xl mx-auto">Discover our most prestigious vehicles, each representing the pinnacle of automotive craftsmanship</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Car 1 - Ferrari F8 Tributo -->
+                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1730110206434-0ea11dedbbf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-red-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">New Arrival</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Ferrari F8 Tributo</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">V8 twin-turbo engine delivering 710 horsepower of pure Italian passion and precision engineering</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-red-400"data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-60: 2.9s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-red-400"></i>
+                                    <span class="text-gray-300 text-sm font-eb">V8 Turbo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$280,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="Ferrari F8 Tributo" 
+                                data-price="280000" 
+                                data-image="https://images.unsplash.com/photo-1730110206434-0ea11dedbbf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                
+                 
+                
+                <!-- Car 2 -->
+                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1647200527885-f017c04c502b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Exclusive Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Rolls Royce Phantom</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The pinnacle of luxury with handcrafted British elegance and unmatched refinement</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-white" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-60: 5.3s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-white"></i>
+                                    <span class="text-gray-300 text-sm font-eb">V12 TT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$450,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="Rolls Royce Phantom" 
+                                data-price="450000" 
+                                data-image="https://images.unsplash.com/photo-1647200527885-f017c04c502b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 3 -->
+                                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://www.topgear.com/sites/default/files/2023/11/1%20Ferrari%20250%20GTO.jpg');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-orange-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Rare Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Ferrari 250 GTO</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The Ferrari 250 GTO is one of the most iconic and valuable classic cars in automotive history.
+
+</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-orange-400" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-100: 4,1–4,6s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-orange-400"></i>
+                                    <span class="text-gray-300 text-sm font-eb">V12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$45,000,000.00</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105  hover:text-white transform transition-all duration-300 shadow-lg add-to-bag text-black"
+                                data-car="Ferrari 250 GTO
+                                data-price="4500000000" 
+                                data-image="https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 4 -->
+                                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://wallpapercave.com/wp/wp2422658.jpg');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Exclusive Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">BMW M3 E30 1990</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The 1990 BMW M3 E30 is a legendary German sports car built for racing homologation</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-purple-400" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-100: 7.0s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-purple-400"></i>
+                                    <span class="text-gray-300 text-sm font-eb">2.3L</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$100,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="BMW M3 E30 1990" 
+                                data-price="100000" 
+                                data-image="https://wallpapercave.com/wp/wp2422658.jpg">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 5 -->
+                                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://hdqwalls.com/wallpapers/mclaren-senna-new-2019-ah.jpg');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Super Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Mclaren Senna</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The McLaren Senna is McLaren's most track-focused road car—ultra-light, blistering fast, and fiercely aerodynamic</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-white" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-100: 2.8s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-white"></i>
+                                    <span class="text-gray-300 text-sm font-eb">V8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$1 million</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class=" text-black w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag" 
+                                data-car="Mclaren Senna" 
+                                data-price="1000000" 
+                                data-image="https://hdqwalls.com/wallpapers/mclaren-senna-new-2019-ah.jpg">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 6 -->
+                                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://static.giggster.com/images/location/e4bda9dc-10d2-4626-9eed-d73128e54e9a/637ce34f-98e8-40c2-8ad9-0cbf8023309c/full_hd.jpeg');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Convertible Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Mini Cooper 2022</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The pinnacle of luxury with handcrafted British elegance and unmatched refinement</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-pink-400" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-100: 8.3s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-pink-400"></i>
+                                    <span class="text-gray-300 text-sm font-eb">1.5L</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$52,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="Mini Cooper 2020" 
+                                data-price="52000" 
+                                data-image="https://static.giggster.com/images/location/e4bda9dc-10d2-4626-9eed-d73128e54e9a/637ce34f-98e8-40c2-8ad9-0cbf8023309c/full_hd.jpeg">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 7 -->
+                 <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://d.newsweek.com/en/full/1922268/rolls-royce-ghost-black-badge.jpg');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Black Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Rolls Royce Ghost 2024</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The pinnacle of luxury with handcrafted British elegance and unmatched refinement</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-white" data-lucide="hourglass"></i>
+                                    <span class="text-white text-sm font-eb">0-100: 5.3s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-white"></i>
+                                    <span class="text-white text-sm font-eb">V12 TT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$435,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="Rolls Royce Ghost 2024" 
+                                data-price="435000" 
+                                data-image="https://d.newsweek.com/en/full/1922268/rolls-royce-ghost-black-badge.jpg">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 8 -->
+                                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.bvN3LJFmxGsYK7mdFvEWdwHaE8?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Exclusive Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">Lamborghini Aventador SVJ 2018</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">The pinnacle of luxury with handcrafted British elegance and unmatched refinement</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class="text-purple-400" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-100: 2.8s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-purple-400"></i>
+                                    <span class="text-gray-300 text-sm font-eb">V12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$600,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="Lamborghini Aventador SVJ 2018" 
+                                data-price="600000" 
+                                data-image="https://tse4.mm.bing.net/th/id/OIP.bvN3LJFmxGsYK7mdFvEWdwHaE8?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                <!-- car 9 -->
+                                <div class="glass-morphism rounded-3xl shadow-2xl overflow-hidden card-hover group">
+                    <div class="car-image" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.3sFtK6mt_vyfdF0oFwsFtwAAAA?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2');">
+                        <div class="absolute top-6 left-6 z-10">
+                            <span class="bg-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">Exclusive Edition</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-3">BMW 8 Series Gran Coupe</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed font-work">Sporty appearance with a premium interior. More dynamic than the 7 Series, yet still luxurious.</p>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center space-x-2">
+                                    <i class=" text-white" data-lucide="hourglass"></i>
+                                    <span class="text-gray-300 text-sm font-eb">0-100: 4s</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-gas-pump text-purple-400"></i>
+                                    <span class="text-gray-300 text-sm font-eb"> V8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-bold text-white text-3xl">$105,000</span>
+                            <div class="flex items-center space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg add-to-bag text-black" 
+                                data-car="BMW 8 Series Gran Coupe" 
+                                data-price="105000" 
+                                data-image="https://tse3.mm.bing.net/th/id/OIP.3sFtK6mt_vyfdF0oFwsFtwAAAA?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2">
+                            <i class="fas fa-shopping-bag mr-3"></i>
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+                     
+            </div>
+        </div>
+        
+    </section>
+
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="font-playfair text-5xl lg:text-6xl font-bold text-white mb-6">Luxury Gallery</h2>
+                <p class="text-gray-400 text-xl max-w-2xl mx-auto">Immerse yourself in the beauty and craftsmanship of automotive artistry</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item aspect-square rounded-2xl overflow-hidden sepia" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://plus.unsplash.com/premium_photo-1661868739531-c501499b0fff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Ferrari Interior" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <a href="https://plus.unsplash.com/premium_photo-1661868739531-c501499b0fff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " 
+                           data-lightbox="gallery" data-title="Drive seat">
+                            <i class="fas fa-search-plus text-white text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item aspect-square rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Lamborghini Design" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <a href="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                           data-lightbox="gallery" data-title="Lamborghini Design">
+                            <i class="fas fa-search-plus text-white text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item aspect-square rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1619362360115-f57612eda98d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Rolls Royce Luxury" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <a href="https://images.unsplash.com/photo-1619362360115-f57612eda98d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                           data-lightbox="gallery" data-title="Rolls Royce Luxury">
+                            <i class="fas fa-search-plus text-white text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item aspect-square rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1611651338412-8403fa6e3599?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Porsche Craftsmanship" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <a href="https://images.unsplash.com/photo-1611651338412-8403fa6e3599?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                           data-lightbox="gallery" data-title="Porsche Craftsmanship">
+                            <i class="fas fa-search-plus text-white text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item aspect-square rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1710210123742-52dc0012bc8a?q=80&w=691&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Aston Martin Elegance" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <a href="https://images.unsplash.com/photo-1710210123742-52dc0012bc8a?q=80&w=691&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                           data-lightbox="gallery" data-title="Aston Martin Elegance">
+                            <i class="fas fa-search-plus text-white text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item aspect-square rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1552561040-3ff08bed3eba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Luxury Showroom" class="w-full h-full object-cover">
+                    <div class="gallery-overlay">
+                        <a href="https://images.unsplash.com/photo-1552561040-3ff08bed3eba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                           data-lightbox="gallery" data-title="Luxury Showroom">
+                            <i class="fas fa-search-plus text-white text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1200">
+                    <h2 class="font-playfair text-5xl lg:text-6xl font-bold text-white mb-8">About Our</h2>
+                    <p class="text-gray-300 text-xl leading-relaxed mb-8 font-playfair">
+                        Motor Hub hadir sebagai destinasi utama bagi para pecinta otomotif yang menginginkan lebih dari sekadar membeli kendaraan. Kami berkomitmen untuk menyediakan pengalaman berbelanja yang tak terlupakan dengan menggabungkan koleksi mobil mewah terbaik dunia, layanan pelanggan yang personal, dan fasilitas showroom yang memukau.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-white mb-2" id="cars-sold">0</div>
+                            <div class="text-gray-400">Luxury Cars Sold</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-white mb-2" id="satisfied-clients">0</div>
+                            <div class="text-gray-400">Satisfied Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-white mb-2" id="years-experience">0</div>
+                            <div class="text-gray-400">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-white mb-2" id="exclusive-models">0</div>
+                            <div class="text-gray-400">Exclusive Models</div>
+                        </div>
+                    </div>
+                    <button class="premium-gradient px-10 py-4 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-2xl">
+                        <i class="fas fa-award mr-3"></i>
+                        Our Certifications
+                    </button>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                    <div class="relative">
+                        <div class="glass-morphism rounded-3xl p-10 relative z-10 ">
+                            <img  class="grayscale sepia" style="border-top-left-radius: 20px; border-top-right-radius:60px; border-bottom-left-radius: 80px; border-bottom-right-radius: 40px;" src="https://images.unsplash.com/photo-1685991924537-48a0a45f53b4?q=80&w=1282&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Elite Motors Showroom" class="w-full rounded-2xl">
+                        </div>
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full floating-animation opacity-20"></div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full floating-animation opacity-20" style="animation-delay: 2s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-black to-gray-900" id="mailtoForm">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="font-playfair text-5xl lg:text-6xl font-bold text-white mb-6">Get In Touch</h2>
+                <p class="text-gray-400 text-xl max-w-2xl mx-auto">Ready to experience luxury? Contact our expert team to schedule a private viewing</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div data-aos="fade-right" data-aos-duration="1200">
+                    <div class="glass-morphism rounded-3xl p-10">
+                        <h3 class="font-playfair text-3xl font-bold text-white mb-8">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
+                                    <i class=" text-white" data-lucide="map-pinned"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-semibold">Visit Our Showroom</div>
+                                    <div class="text-gray-400">SMKN 46 JAKARTA</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
+                                    <i class="text-white" data-lucide="phone-call"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-semibold">Call Us</div>
+                                    <div class="text-gray-400">0812345678</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
+                                    <i class=" text-white" data-lucide="mail-plus"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-semibold">Email Us</div>
+                                    <div class="text-gray-400">haikalrasyaputra@gmail.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
+                                    <i class=" text-white" data-lucide="clock-fading"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-semibold">Opening Hours</div>
+                                    <div class="text-gray-400">Mon-Friday 6-15 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-facebook-f text-white"></i>
+                                </a>
+                                <a href="https://www.instagram.com/haikalrasyaputraa?igsh=cGZtdndzbzE0Ymhu&utm_source=qr" class="w-10 h-10 bg-gradient-to-br from-pink-600 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-instagram text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-github text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300" >
+                    <div class="glass-morphism rounded-3xl p-10">
+                        <h3 class="font-playfair text-3xl font-bold text-white mb-8">Send a Message</h3>
+                        
+                        <form class="space-y-6" id="mailtoFrom">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <input type="text" placeholder="First Name" 
+                                           class="w-full px-6 py-4 glass-morphism rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-white placeholder-gray-400">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Last Name" 
+                                           class="w-full px-6 py-4 glass-morphism rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-white placeholder-gray-400">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <input type="email" placeholder="Email Address" 
+                                       class="w-full px-6 py-4 glass-morphism rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-white placeholder-gray-400">
+                            </div>
+                            
+                            <div>
+                                <input type="tel" placeholder="Phone Number" 
+                                       class="w-full px-6 py-4 glass-morphism rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-white placeholder-gray-400">
+                            </div>
+                            
+                            <div>
+                                <select class="w-full px-6 py-4 glass-morphism rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-black">
+                                    <option value="">Select Interest</option>
+                                    <option value="ferrari">Ferrari</option>
+                                    <option value="lamborghini">Lamborghini</option>
+                                    <option value="rolls-royce">Rolls Royce</option>
+                                    <option value="mclaren">McLaren</option>
+                                    <option value="porsche">Mini Cooper</option>
+                                    <option value="aston-martin">Bmw</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <textarea placeholder="Your Message" rows="4" 
+                                          class="w-full px-6 py-4 glass-morphism rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-white placeholder-gray-400 resize-none"></textarea>
+                            </div>
+                            <a href="mailto:haikalrasyaputra@gmail.com? subject=Mail From Our Website">
+                            <button type="submit" class="w-full premium-gradient py-4 rounded-2xl font-semibold hover:scale-105 transform transition-all duration-300 shadow-2xl">
+                                <i class="fas fa-paper-plane mr-3"></i>
+                                Send Message
+                            </button>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-black py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-transparent rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-car text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-white">Retro<span class="text-sky-100 font-eb">Lux</span></h3>
+                            <p class="text-gray-400 text-sm">Luxury Redefined</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Experience the pinnacle of automotive excellence with our curated collection of the world's most prestigious vehicles.</p>
+                    <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-facebook-f text-white"></i>
+                                </a>
+                                <a href="https://www.instagram.com/haikalrasyaputraa?igsh=cGZtdndzbzE0Ymhu&utm_source=qr" class="w-10 h-10 bg-gradient-to-br from-pink-600 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-instagram text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <i class="fab fa-github text-white"></i>
+                                </a>
+                            </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#collection" class="text-gray-400 hover:text-white transition-colors duration-300">Collection</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300">Gallery</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6">Brands</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Ferrari</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Lamborghini</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Rolls Royce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">McLaren</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Bmw</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Mini Cooper</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6">Informasi Lebih Lanjut</h4>
+                    <p class="text-gray-400 mb-6">Untuk Informasi Lebih lanjut</p>
+                    <div class="space-y-4">
+                        <input type="email" placeholder="Enter your email" 
+                               class="w-full px-4 py-3 glass-morphism rounded-xl focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 text-white placeholder-gray-400">
+                        <button class="w-full premium-gradient py-3 rounded-xl font-semibold hover:scale-105 transform transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Click Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 font-eb">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-gray-400 text-lg font-playfair">
+                        © 2025 Retro<span class="text-sky-100 font-playfair">Lux</span> <br>Haikal.
+                    </div>
+                    <div class="flex items-center space-x-6 text-gray-400 text-sm">
+                         <div class="flex items-center gap-2  p-4 rounded-lg">
+                    <i data-lucide="lock" class="text-white w-5 h-5"></i>
+                    <span>Secure</span>
+                </div>
+                 <div class="flex items-center gap-2  p-4 rounded-lg">
+                    <i data-lucide="truck-electric" class="text-white w-5 h-5"></i>
+                    <span>White Glove Delivery</span>
+                </div>
+                  <div class="flex items-center gap-2  p-4 rounded-lg">
+                    <i data-lucide="star" class="text-white w-5 h-5"></i>
+                    <span>5-Star Service</span>
+                </div>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <!-- Shopping Cart Modal -->
+    <div id="shopping-cart-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="glass-morphism rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="font-playfair text-3xl font-bold text-white">Your Collection</h3>
+                        <button id="close-modal" class="w-10 h-10 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/40 transition-all duration-300">
+                            <i class="fas fa-times text-white"></i>
+                        </button>
+                    </div>
+                    
+                    <div id="bag-items" class="space-y-6 max-h-96 overflow-y-auto">
+                        <!-- Items will be dynamically inserted here -->
+                    </div>
+                    
+                    <div class="border-t border-gray-700 mt-8 pt-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-playfair text-2xl font-bold text-white">Total:</span>
+                            <span id="total-price" class="font-playfair text-3xl font-bold text-white">$0</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <button id="clear-bag" class="py-3 px-6 bg-red-600/20 rounded-xl font-semibold text-white hover:bg-red-600/40 transition-all duration-300">
+                                <i class="fas fa-trash mr-2"></i>
+                                Clear Collection
+                            </button>
+                            <button class="premium-gradient py-3 px-6 rounded-xl font-semibold hover:scale-105 transform transition-all duration-300 text-white">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                Request Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 premium-gradient rounded-full shadow-2xl z-40 opacity-0 pointer-events-none transition-all duration-300 hover:scale-110">
+        <i class="fas fa-chevron-up text-black"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
+        <div class="text-center">
+            <div class="w-20 h-20 border-4 border-purple-600/30 border-t-purple-600 rounded-full animate-spin mb-6"></div>
+            <h2 class="font-playfair text-2xl text-white mb-2">Elite Motors</h2>
+            <p class="text-gray-400">Loading luxury experience...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <script>
+        
+         AOS.init({
+            duration: 1000,
+            once: false,
+            easing: 'ease-out-cubic'
+        });
+         // Inisialisasi setelah DOM loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+// Shopping Bag functionality - Global variables
+
+// Wait for everything to load
+window.addEventListener('load', function() {
+    console.log('Page loaded, initializing shopping bag...');
+    
+    // Hide loading overlay
+    setTimeout(() => {
+        const loadingOverlay = document.getElementById('loading-overlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 500);
+        }
+    }, 1500);
+
+    // Initialize shopping bag
+    initializeShoppingBag();
+    
+    // Initialize other features
+    initializeOtherFeatures();
+});
+
+  // Shopping Bag functionality - Global variables
+        let shoppingBag = [];
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing shopping bag...');
+            initializeShoppingBag();
+        });
+
+        function initializeShoppingBag() {
+            console.log('Initializing shopping bag...');
+            
+            // Setup all "Add to Bag" buttons
+            const addToBagButtons = document.querySelectorAll('.add-to-bag');
+            console.log('Found add-to-bag buttons:', addToBagButtons.length);
+            
+            addToBagButtons.forEach((button, index) => {
+                console.log(`Setting up button ${index}:`, button);
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Add to bag clicked!', this);
+                    
+                    // Get data from button
+                    const car = this.getAttribute('data-car') || 'Unknown Car';
+                    const priceStr = this.getAttribute('data-price') || '0';
+                    const price = parseInt(priceStr.replace(/[^0-9]/g, ''));
+                    const image = this.getAttribute('data-image') || 'https://via.placeholder.com/400x300';
+                    
+                    console.log('Item data:', { car, price, image });
+                    
+                    // Add to shopping bag
+                    const existingItem = shoppingBag.find(item => item.car === car);
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                        console.log('Updated existing item quantity:', existingItem.quantity);
+                    } else {
+                        shoppingBag.push({ car, price, image, quantity: 0 });
+                        console.log('Added new item to bag');
+                    }
+                    
+                    console.log('Current shopping bag:', shoppingBag);
+                    
+                    // Update display
+                    updateBagCounter();
+                    updateBagDisplay();
+                    
+                    // Show success feedback
+                    const originalContent = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check mr-3"></i>Added!';
+                    this.style.backgroundColor = '#10b981';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalContent;
+                        this.style.backgroundColor = '';
+                        this.disabled = false;
+                    }, 2000);
+                });
+            });
+
+            // Setup modal functionality
+            const bagIcon = document.getElementById('bag-icon');
+            const modal = document.getElementById('shopping-cart-modal');
+            const closeModal = document.getElementById('close-modal');
+            const clearBag = document.getElementById('clear-bag');
+
+            console.log('Modal elements:', { bagIcon, modal, closeModal, clearBag });
+
+            if (bagIcon) {
+                bagIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Bag icon clicked');
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        updateBagDisplay();
+                    }
+                });
+            }
+
+            if (closeModal) {
+                closeModal.addEventListener('click', function() {
+                    console.log('Close modal clicked');
+                    if (modal) {
+                        modal.classList.add('hidden');
+                    }
+                });
+            }
+
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.classList.add('hidden');
+                    }
+                });
+            }
+
+            if (clearBag) {
+                clearBag.addEventListener('click', function() {
+                    console.log('Clear bag clicked');
+                    shoppingBag = [];
+                    updateBagDisplay();
+                    updateBagCounter();
+                });
+            }
+
+            // Initialize counter
+            updateBagCounter();
+        }
+
+        
+
+        function updateBagDisplay() {
+            console.log('Updating bag display...');
+            const bagItems = document.getElementById('bag-items');
+            const totalPrice = document.getElementById('total-price');
+            
+            console.log('Bag items element:', bagItems, 'Total price element:', totalPrice);
+            console.log('Current shopping bag:', shoppingBag);
+            
+            if (!bagItems || !totalPrice) {
+                console.log('Required elements not found!');
+                return;
+            }
+            
+            if (shoppingBag.length === 0) {
+                bagItems.innerHTML = `
+                    <div class="text-center py-12">
+                        <i class="fas fa-shopping-bag text-gray-500 text-4xl mb-4"></i>
+                        <p class="text-gray-400">Your collection is empty</p>
+                        <p class="text-gray-500 text-sm mt-2">Add some luxury vehicles to get started</p>
+                    </div>
+                `;
+                totalPrice.textContent = '$0';
+                return;
+            }
+            
+            bagItems.innerHTML = shoppingBag.map(item => `
+                <div class="flex items-center space-x-4 p-4 glass-morphism rounded-2xl">
+                    <img src="${item.image}" alt="${item.car}" class="w-20 h-20 object-cover rounded-xl">
+                    <div class="flex-1">
+                        <h4 class="text-white font-semibold">${item.car}</h4>
+                        <p class="text-gray-400">$${item.price.toLocaleString()}</p>
+                        <p class="text-gray-500 text-sm">Subtotal: $${(item.price * item.quantity).toLocaleString()}</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button onclick="updateQuantity('${item.car.replace(/'/g, "\\'")}', -1)" class="w-8 h-8 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/40 transition-all">
+                            <i class="fas fa-minus text-white text-sm"></i>
+                        </button>
+                        <span class="text-white font-semibold w-8 text-center">${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.car.replace(/'/g, "\\'")}', 1)" class="w-8 h-8 bg-green-600/20 rounded-full flex items-center justify-center hover:bg-green-600/40 transition-all">
+                            <i class="fas fa-plus text-white text-sm"></i>
+                        </button>
+                        <button onclick="removeItem('${item.car.replace(/'/g, "\\'")}', 1)" class="w-8 h-8 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/40 transition-all ml-2">
+                            <i class="fas fa-trash text-white text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            
+            const total = shoppingBag.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            totalPrice.textContent = '$' + total.toLocaleString();
+        }
+
+        // Global functions for onclick handlers
+        function updateQuantity(carName, delta) {
+            console.log('Updating quantity for:', carName, 'delta:', delta);
+            const item = shoppingBag.find(item => item.car === carName);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    shoppingBag = shoppingBag.filter(item => item.car !== carName);
+                }
+                updateBagDisplay();
+                updateBagCounter();
+            }
+        }
+
+        function removeItem(carName) {
+            console.log('Removing item:', carName);
+            shoppingBag = shoppingBag.filter(item => item.car !== carName);
+            updateBagDisplay();
+            updateBagCounter();
+        }
+
+        // Test function - call this from console to add test item
+        function addTestItem() {
+            console.log('Adding test item...');
+            shoppingBag.push({ 
+                car: 'Test Ferrari', 
+                price: 300000, 
+                image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+                quantity: 1 
+            });
+            updateBagDisplay();
+            updateBagCounter();
+            console.log('Test item added:', shoppingBag);
+        }
+// Global functions for onclick handlers
+function updateQuantity(carName, delta) {
+    console.log('Updating quantity for:', carName, 'delta:', delta);
+    const item = shoppingBag.find(item => item.car === carName);
+    if (item) {
+        item.quantity += delta;
+        if (item.quantity <= 0) {
+            shoppingBag = shoppingBag.filter(item => item.car !== carName);
+        }
+        updateBagDisplay();
+        updateBagCounter();
+    }
+}
+
+function removeItem(carName) {
+    console.log('Removing item:', carName);
+    shoppingBag = shoppingBag.filter(item => item.car !== carName);
+    updateBagDisplay();
+    updateBagCounter();
+}
+
+function initializeOtherFeatures() {
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+    }
+
+    if (mobileMenuClose && mobileMenu) {
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    }
+}
+
+function updateBagCounter() {
+    console.log('Updating bag counter...');
+    const counter = document.getElementById('bag-counter');
+    const totalItems = shoppingBag.reduce((sum, item) => sum + item.quantity, 0);
+    
+    console.log('Total items:', totalItems, 'Counter element:', counter);
+    
+    if (counter) {
+        counter.textContent = totalItems;
+        if (totalItems > 0) {
+            counter.style.display = 'flex';
+            counter.classList.add('animate-pulse');
+            setTimeout(() => {
+                counter.classList.remove('animate-pulse');
+            }, 1000);
+        } else {
+            counter.style.display = 'none';
+        }
+    } else {
+        console.log('Counter element not found!');
+    }
+}
+
+function updateBagDisplay() {
+    console.log('Updating bag display...');
+    const bagItems = document.getElementById('bag-items');
+    const totalPrice = document.getElementById('total-price');
+    
+    console.log('Bag items element:', bagItems, 'Total price element:', totalPrice);
+    console.log('Current shopping bag:', shoppingBag);
+    
+    if (!bagItems || !totalPrice) {
+        console.log('Required elements not found!');
+        return;
+    }
+    
+    if (shoppingBag.length === 0) {
+        bagItems.innerHTML = `
+            <div class="text-center py-12">
+                <i class="fas fa-shopping-bag text-gray-500 text-4xl mb-4"></i>
+                <p class="text-gray-400">Your collection is empty</p>
+                <p class="text-gray-500 text-sm mt-2">Add some luxury vehicles to get started</p>
+            </div>
+        `;
+        totalPrice.textContent = '$0';
+        return;
+    }
+    
+    bagItems.innerHTML = shoppingBag.map(item => `
+        <div class="flex items-center space-x-4 p-4 glass-morphism rounded-2xl">
+            <img src="${item.image}" alt="${item.car}" class="w-20 h-20 object-cover rounded-xl">
+            <div class="flex-1">
+                <h4 class="text-white font-semibold">${item.car}</h4>
+                <p class="text-gray-400">$${item.price.toLocaleString()}</p>
+                <p class="text-gray-500 text-sm">Subtotal: $${(item.price * item.quantity).toLocaleString()}</p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button onclick="updateQuantity('${item.car.replace(/'/g, "\\'")}', -1)" class="w-8 h-8 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/40 transition-all">
+                    <i class="fas fa-minus text-white text-sm"></i>
+                </button>
+                <span class="text-white font-semibold w-8 text-center">${item.quantity}</span>
+                <button onclick="updateQuantity('${item.car.replace(/'/g, "\\'")}', 1)" class="w-8 h-8 bg-green-600/20 rounded-full flex items-center justify-center hover:bg-green-600/40 transition-all">
+                    <i class="fas fa-plus text-white text-sm"></i>
+                </button>
+                <button onclick="removeItem('${item.car.replace(/'/g, "\\'")}', 1)" class="w-8 h-8 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/40 transition-all ml-2">
+                    <i class="fas fa-trash text-white text-sm"></i>
+                </button>
+            </div>
+        </div>
+    `).join('');
+    
+    const total = shoppingBag.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    totalPrice.textContent = '$' + total.toLocaleString();
+}
+
+// Global functions for onclick handlers
+function updateQuantity(carName, delta) {
+    console.log('Updating quantity for:', carName, 'delta:', delta);
+    const item = shoppingBag.find(item => item.car === carName);
+    if (item) {
+        item.quantity += delta;
+        if (item.quantity <= 0) {
+            shoppingBag = shoppingBag.filter(item => item.car !== carName);
+        }
+        updateBagDisplay();
+        updateBagCounter();
+    }
+}
+
+function removeItem(carName) {
+    console.log('Removing item:', carName);
+    shoppingBag = shoppingBag.filter(item => item.car !== carName);
+    updateBagDisplay();
+    updateBagCounter();
+}
+
+// Test function - call this from console to add test item
+function addTestItem() {
+    console.log('Adding test item...');
+    shoppingBag.push({ 
+        car: 'Test Ferrari', 
+        price: 300000, 
+        image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+        quantity: 1 
+    });
+    updateBagDisplay();
+    updateBagCounter();
+    console.log('Test item added:', shoppingBag);
+}
+
+// Counter animations
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 100;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, 20);
+}
+
+// Intersection Observer for counter animation
+const counters = [
+    { id: 'cars-sold', target: 2500 },
+    { id: 'satisfied-clients', target: 1800 },
+    { id: 'years-experience', target: 35 },
+    { id: 'exclusive-models', target: 150 }
+];
+
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = counters.find(c => c.id === entry.target.id);
+            if (counter) {
+                animateCounter(entry.target, counter.target);
+                observer.unobserve(entry.target);
+            }
+        }
+    });
+}, observerOptions);
+
+// Initialize counter observers when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    counters.forEach(counter => {
+        const element = document.getElementById(counter.id);
+        if (element) observer.observe(element);
+    });
+});
+
+// Back to top button
+window.addEventListener('DOMContentLoaded', () => {
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-100');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+// Navbar scroll effect
+let lastScrollY = window.scrollY;
+
+window.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+    
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScrollY = window.scrollY;
+        });
+    }
+});
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.parallax-bg');
+    
+    parallaxElements.forEach(element => {
+        const speed = 0.5;
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
+
+// Form submission
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const button = this.querySelector('button[type="submit"]');
+            if (button) {
+                const originalText = button.innerHTML;
+                
+                button.innerHTML = '<i class="fas fa-check mr-3"></i>Message Sent!';
+                button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                button.disabled = true;
+                
+                // Reset form
+                this.reset();
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.disabled = false;
+                }, 3000);
+            }
+        });
+    }
+});
+
+// Newsletter subscription
+document.addEventListener('DOMContentLoaded', () => {
+    const newsletterInput = document.querySelector('footer input[type="email"]');
+    const newsletterButton = document.querySelector('footer button');
+    
+    if (newsletterInput && newsletterButton) {
+        const handleSubscription = () => {
+            const originalText = newsletterButton.innerHTML;
+            
+            newsletterButton.innerHTML = '<i class="fas fa-check mr-2"></i>Subscribed!';
+            newsletterButton.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            newsletterButton.disabled = true;
+            
+            newsletterInput.value = '';
+            
+            setTimeout(() => {
+                newsletterButton.innerHTML = originalText;
+                newsletterButton.style.background = '';
+                newsletterButton.disabled = false;
+            }, 3000);
+        };
+
+        newsletterInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSubscription();
+            }
+        });
+
+        newsletterButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (newsletterInput.value.trim()) {
+                handleSubscription();
+            }
+        });
+    }
+});
+
+// Add hover effects to car cards
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.card-hover').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+// Array of Lamborghini Huracán images
+        const carImages = [
+            'https://images.unsplash.com/photo-1544829099-b9a0c5303bea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        ];
+        
+        let currentImageIndex = 0;
+        const carImageElement = document.getElementById('carImage');
+        const currentImageSpan = document.getElementById('currentImage');
+        const totalImagesSpan = document.getElementById('totalImages');
+        const dotsContainer = document.getElementById('dotsContainer');
+        
+        // Initialize
+        function init() {
+            // Set total images
+            totalImagesSpan.textContent = carImages.length;
+            
+            // Generate dots
+            generateDots();
+            
+            // Set initial image
+            updateImage();
+            
+            // Auto-slide every 4 seconds
+            setInterval(() => {
+                changeImage(1);
+            }, 4000);
+        }
+        
+        // Generate dots
+        function generateDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < carImages.length; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                dot.onclick = () => goToImage(i);
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Change image function
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            // Loop around
+            if (currentImageIndex >= carImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = carImages.length - 1;
+            }
+            
+            updateImage();
+        }
+        
+        // Go to specific image
+        function goToImage(index) {
+            currentImageIndex = index;
+            updateImage();
+        }
+        
+        // Update image display
+        function updateImage() {
+            // Update background image with smooth transition
+            carImageElement.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                carImageElement.style.backgroundImage = `url('${carImages[currentImageIndex]}')`;
+                carImageElement.style.opacity = '1';
+            }, 150);
+            
+            // Update counter
+            currentImageSpan.textContent = currentImageIndex + 1;
+            
+            // Update dots
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+        
+        // Initialize when page loads
+        init();
+        
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        
+        carImageElement.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        carImageElement.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    changeImage(1); // Swipe left - next image
+                } else {
+                    changeImage(-1); // Swipe right - previous image
+                }
+            }
+        }
+// Preload images for better performance
+const imageUrls = [
+    'https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1544829099-b9a0c5303bea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+];
+
+imageUrls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+});
+
+// Debug function to check if elements exist
+function debugShoppingBag() {
+    console.log('Shopping Bag Debug:');
+    console.log('Add to bag buttons:', document.querySelectorAll('.add-to-bag').length);
+    console.log('Bag icon:', document.getElementById('bag-icon'));
+    console.log('Shopping bag modal:', document.getElementById('shopping-bag-modal'));
+    console.log('Current bag contents:', shoppingBag);
+}
+//perbaikan
+function updateBagCounter() {
+    const counter = document.getElementById('bag-counter');
+    if (!counter) return;
+
+    const totalItems = shoppingBag.reduce((sum, item) => sum + item.quantity, 0);
+    counter.innerText = totalItems;
+    counter.style.display = totalItems > 0 ? 'inline-block' : 'none';
+}
+// Call debug function if needed
+ debugShoppingBag();
+ 
+ particlesJS("particles-top",{
+    "particles": {
+      "number": {
+        "value": 180,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.8,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 0.5,
+          "opacity_min": 0.3,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 1.5,
+        "random": true
+      },
+      "line_linked": {
+        "enable": false
+      },
+      "move": {
+        "enable": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false
+        },
+        "onclick": {
+          "enable": false
+        },
+        "resize": true
+      }
+    },
+    "retina_detect": true
+  });
+        
+    </script>
+</body>
+</html>
